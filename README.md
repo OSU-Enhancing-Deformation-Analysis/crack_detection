@@ -1,4 +1,4 @@
-Usage:
+SINGLE file crack detection:
 
 Make sure you have python and numpy installed
 
@@ -18,4 +18,18 @@ By default, the program will save a preview image and DICE subset file.
 
 EXAMPLE:
 
+```
 python crack_detect.py crack_1.tif 40 2
+```
+
+BATCH file crack detection:
+
+```
+python crack_detect_batch.py <folder-name>
+```
+or
+```
+python crack_detect_batch.py <folder-name> <crack-lightness> <fill-threshhold>
+```
+
+The results will be stored in another folder called <folder_name>_results
