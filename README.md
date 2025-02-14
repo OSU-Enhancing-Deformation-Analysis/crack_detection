@@ -1,4 +1,4 @@
-SINGLE file crack detection:
+#Single file crack detection:
 
 Make sure you have python and numpy installed
 
@@ -22,7 +22,7 @@ EXAMPLE:
 python crack_detect.py crack_1.tif 40 2
 ```
 
-BATCH file crack detection:
+#BATCH file crack detection:
 
 ```
 python crack_detect_batch.py <folder-name>
