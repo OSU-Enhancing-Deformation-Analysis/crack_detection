@@ -5,8 +5,6 @@ import os
 
 np.set_printoptions(threshold=sys.maxsize)
 
-INPUT_FILE ='crack_5.tif'
-
 class CrackDetect:
     def __init__(self, crack_darkness=40, fill_threshhold=2, sharpness=50, resolution=3, amount=1):
         self.darkness = crack_darkness
