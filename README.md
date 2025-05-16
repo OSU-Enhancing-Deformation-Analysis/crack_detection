@@ -1,3 +1,19 @@
+# Crack detection algorithm
+
+This program uses the OpenCV image library to detect cracks in materials. The algorithm can be sumarized as follows:
+
+1. All pixels below a certain brightness in the image are highlighted
+2. The target areas are then "dilated" and "eroded" (grown and shrank) to smooth edges
+3. Any holes in target areas are filled
+4. All continuous areas except largest n areas are removed
+5. The final areas are outlined
+
+It is important to adjust the crack lightness and fill threshold values depending on the details of the input image for the algorithm to work.
+
+# Result examples
+
+![Graphite crack](https://i.ibb.co/cKcdtTjw/crack-2-outline.jpg)
+
 # Single file crack detection:
 
 Make sure you have python and numpy installed
