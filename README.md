@@ -1,4 +1,4 @@
-# Crack detection algorithm
+## Crack detection algorithm
 
 This program uses the OpenCV image library to detect cracks in materials. The algorithm can be sumarized as follows:
 
@@ -10,11 +10,11 @@ This program uses the OpenCV image library to detect cracks in materials. The al
 
 It is important to adjust the crack lightness and fill threshold values depending on the details of the input image for the algorithm to work.
 
-# Result examples
+## Result examples
 
 ![Graphite crack](https://i.ibb.co/cKcdtTjw/crack-2-outline.jpg)
 
-# Single file crack detection:
+## Single file crack detection:
 
 Make sure you have python and numpy installed
 
@@ -41,7 +41,7 @@ EXAMPLE:
 python crack_detect.py crack_1.tif 40 2
 ```
 
-# BATCH file crack detection:
+## BATCH file crack detection:
 
 ```
 python crack_detect_batch.py <folder-name>
