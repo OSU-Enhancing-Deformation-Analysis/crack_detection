@@ -16,8 +16,10 @@ It is important to adjust the crack lightness and fill threshold values dependin
 
 ## Result examples
 
+Image preview after crack detection:
 <img src="https://i.ibb.co/cKcdtTjw/crack-2-outline.jpg" width="80%">
 
+DICe interface after importing subsets
 <img src="https://i.ibb.co/YJw8L3W/Screenshot-2025-05-18-221900.png" width="90%">
 
 ## Usage Instructions
