@@ -105,7 +105,7 @@ class CrackDetect:
     # also saves and shows a preview image, and if specified, a DICE subset file 
     def outline_crack(self, image_path, save_subset=False):
         cleaned_img = self.__process_image(image_path)
-            # smooth edges
+        # smooth edges
         blurred = cv2.GaussianBlur(cleaned_img, (13, 13), 0)
         smooth_mask = cv2.inRange(blurred, self.sharpness, 255)
 
@@ -114,7 +114,7 @@ class CrackDetect:
 
         # Approximate the contours to polygons
         approx_polygons = []
-        for i in range(self.amount):
+        for i in range(min(self.amount, len(contours))):
             # epsilon = RESOLUTION * cv2.arcLength(contours[i], True)  # Adjust epsilon for precision
             epsilon = self.resolution
             approx_polygons.append(cv2.approxPolyDP(contours[i], epsilon, True))
@@ -167,12 +167,20 @@ end region_of_interest""".format(aoi, exclusions)
         return approx_polygons
 
 def main():
-
     detector = None
-    if(len(sys.argv) > 2):
-        detector = CrackDetect(crack_darkness=int(sys.argv[2]), fill_threshhold=int(sys.argv[3]))
-    else:
+    if (len(sys.argv) < 2):
+        print("Not enough arguments. Command line usage is the following:")
+        print("python crack_detect.py <input image> [crack darkness] [fill threshhold] [crack number]")
+        return -1
+    elif(len(sys.argv) == 2):
         detector = CrackDetect()
+    elif(len(sys.argv) == 3):
+        detector = CrackDetect(crack_darkness=int(sys.argv[2]))
+    elif(len(sys.argv) == 4):
+        detector = CrackDetect(crack_darkness=int(sys.argv[2]), fill_threshhold=int(sys.argv[3]))
+    elif(len(sys.argv) == 5):
+        detector = CrackDetect(crack_darkness=int(sys.argv[2]), fill_threshhold=int(sys.argv[3]), amount=int(sys.argv[4]))
+    
     if(detector.has_crack(sys.argv[1])):
         print("Crack detected")
         detector.outline_crack(sys.argv[1], save_subset=True)
