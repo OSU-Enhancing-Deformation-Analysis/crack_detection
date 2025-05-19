@@ -18,6 +18,9 @@ It is important to adjust the crack lightness and fill threshold values dependin
 
 ![Graphite crack](https://i.ibb.co/cKcdtTjw/crack-2-outline.jpg)
 
+![DICe Import](https://i.ibb.co/GGNk50J/Screenshot-2025-05-18-221900.png)
+
+
 ## Usage Instructions
 
 ### Single file crack detection:
@@ -60,3 +63,7 @@ python crack_detect_batch.py <folder-name> <crack-lightness> <fill-threshhold> <
 The default cropped pixels is 60 which will be enough to crop out the SEM image labels. Higher values crop out more of the image.
 
 The results will be stored in another folder called <folder_name>_results
+
+## Credits
+
+- OpenCV for image processing functions (OpenCV Website)[https://opencv.org/]
