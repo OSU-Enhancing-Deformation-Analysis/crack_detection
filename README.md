@@ -18,7 +18,7 @@ It is important to adjust the crack lightness and fill threshold values dependin
 
 <img src="https://i.ibb.co/cKcdtTjw/crack-2-outline.jpg" width="50%">
 
-<img src="https://i.ibb.co/GGNk50J/Screenshot-2025-05-18-221900.png" width="50%">
+<img src="https://i.ibb.co/YJw8L3W/Screenshot-2025-05-18-221900.png" width="50%">
 
 ## Usage Instructions
 
