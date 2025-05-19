@@ -1,6 +1,6 @@
 # Crack detection
 
-As part of our projects goal to provide additional preprocessing to images for DIC, the crack detection module takes material images as input and outputs crack outlines. These outlines are exported as subset.txt files which can be directly imported to DICe, allowing users to exclude the crack area from DIC analysis without manual outlining.
+Areas within cracks are unsuitable for digital image correlation because the pixels are out of depth from the rest of the image. DICe has tools to exclude such areas from analysis, but manually outlining cracks is tedious and time consuming. The crack detection module is part of the preprocessing segment of our project, with the goal of generating DICe subset files excluding the crack area automatically. These subset.txt files can be imported into DICe directly to exclude the target area, saving time and providing better results from DICe.
 
 ## Crack detection algorithm
 
@@ -16,10 +16,10 @@ It is important to adjust the crack lightness and fill threshold values dependin
 
 ## Result examples
 
-Image preview after crack detection:
+#### Image preview after crack detection:
 <img src="https://i.ibb.co/cKcdtTjw/crack-2-outline.jpg" width="80%">
 
-DICe interface after importing subsets
+#### DICe interface after importing subsets:
 <img src="https://i.ibb.co/YJw8L3W/Screenshot-2025-05-18-221900.png" width="90%">
 
 ## Usage Instructions
