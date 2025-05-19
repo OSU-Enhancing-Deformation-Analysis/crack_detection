@@ -1,3 +1,7 @@
+# Crack detection
+
+As part of our projects goal to provide additional preprocessing to images for DIC, the crack detection module takes material images as input and outputs crack outlines. These outlines are exported as subset.txt files which can be directly imported to DICe, allowing users to exclude the crack area from DIC analysis without manual outlining.
+
 ## Crack detection algorithm
 
 This program uses the OpenCV image library to detect cracks in materials. The algorithm can be sumarized as follows:
@@ -14,7 +18,9 @@ It is important to adjust the crack lightness and fill threshold values dependin
 
 ![Graphite crack](https://i.ibb.co/cKcdtTjw/crack-2-outline.jpg)
 
-## Single file crack detection:
+## Usage Instructions
+
+### Single file crack detection:
 
 Make sure you have python and numpy installed
 
@@ -41,7 +47,7 @@ EXAMPLE:
 python crack_detect.py crack_1.tif 40 2
 ```
 
-## BATCH file crack detection:
+### Batch file crack detection:
 
 ```
 python crack_detect_batch.py <folder-name>
