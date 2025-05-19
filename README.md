@@ -66,4 +66,4 @@ The results will be stored in another folder called <folder_name>_results
 
 ## Credits
 
-- OpenCV for image processing functions (OpenCV Website)[https://opencv.org/]
+- [OpenCV](https://opencv.org/) for image processing functions 
